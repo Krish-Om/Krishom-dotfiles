@@ -5,7 +5,7 @@ return {
 	},
 	{
 		"nvim-lualine/lualine.nvim",
-		enabled = false,
+		enabled = true,
 	},
 	-- messages, cmdline and the popupmenu
 	{

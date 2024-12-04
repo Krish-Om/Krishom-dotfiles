@@ -8,11 +8,12 @@ iatest=$(expr index "$-" i)
 #	fastfetch
 #fi
 
-alias heroic='flatpak run com.heroicgameslauncher.hgl'
 # Source global definitions
 if [ -f /etc/bashrc ]; then
   . /etc/bashrc
 fi
+
+alias heroic='flatpak run com.heroicgameslauncher.hgl'
 
 export EDITOR=nvim
 export VISUAL=nvim

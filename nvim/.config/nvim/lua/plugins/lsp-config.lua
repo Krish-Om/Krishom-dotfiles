@@ -17,8 +17,9 @@ return {
           "html",
           "vtsls",
           "jsonls",
+          "ast_grep",
           "pyright",
-          "tsserver",
+          "biome",
         },
       })
     end,

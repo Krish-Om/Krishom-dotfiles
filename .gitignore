@@ -1,4 +1,5 @@
 tt.*
+.venv
 .tests
 doc/tags
 debug
@@ -6,4 +7,6 @@ debug
 foo.*
 *.log
 data
-*.json
+extensions
+!.vscode/extensions.json
+node_modules

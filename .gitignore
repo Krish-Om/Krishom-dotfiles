@@ -7,6 +7,6 @@ debug
 foo.*
 *.log
 data
-extensions
-!.vscode/extensions.json
+vscode/.vscode/extensions/*
+!vscode/.vscode/extensions/extensions.json
 node_modules

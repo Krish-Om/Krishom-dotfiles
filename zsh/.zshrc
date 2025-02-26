@@ -1,3 +1,7 @@
+export VOLTA_HOME="$HOME/.volta"
+export PATH="$VOLTA_HOME/bin:$PATH"
+
+alias bks='$HOME/Softwares/Beekeeper-Studio-5.0.9.AppImage'
 alias obsidian-start='systemctl --user enable git-sync-obsidian.timer'
 alias obsidian-status='systemctl --user status git-sync-obsidian.timer'
 alias heroic='flatpak run com.heroicgameslauncher.hgl'
@@ -217,8 +221,6 @@ lazygb() {
 
 # Set up fzf key bindings and fuzzy completion
 
-export VOLTA_HOME="$HOME/.volta"
-export PATH="$VOLTA_HOME/bin:$PATH"
 eval "$(starship init zsh)"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

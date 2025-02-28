@@ -8,9 +8,9 @@ return {
         "shellcheck",
         "shfmt",
         "tailwindcss-language-server",
-        "typescript-language-server",
         "css-lsp",
         "black",
+        "biome",
       })
     end,
   },

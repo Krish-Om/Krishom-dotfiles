@@ -1,13 +1,13 @@
-export VOLTA_HOME="$HOME/.volta"
-export PATH="$VOLTA_HOME/bin:$PATH"
+# export VOLTA_HOME="$HOME/.volta"
+# export PATH="$VOLTA_HOME/bin:$PATH"
 
-alias bks='$HOME/Softwares/Beekeeper-Studio-5.0.9.AppImage'
+alias bkps='$HOME/Softwares/Beekeeper-Studio-5.0.9.AppImage'
 alias obsidian-start='systemctl --user enable git-sync-obsidian.timer'
 alias obsidian-status='systemctl --user status git-sync-obsidian.timer'
 alias heroic='flatpak run com.heroicgameslauncher.hgl'
 alias nvim='$HOME/Softwares/nvim.appimage'
 alias zed='$HOME/Softwares/zed-linux-x86_64/zed.app/bin/zed'
-
+alias cursor='$HOME/Softwares/cursor-0.45.14x86_64.AppImage'
 # Add Flatpak exports to XDG data dirs
 if [ -d /var/lib/flatpak/exports/share ]; then
   export XDG_DATA_DIRS="/var/lib/flatpak/exports/share:${XDG_DATA_DIRS:-/usr/local/share:/usr/share}"

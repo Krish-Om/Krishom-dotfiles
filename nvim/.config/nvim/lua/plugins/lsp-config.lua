@@ -11,6 +11,7 @@ return {
         "css-lsp",
         "black",
         "biome",
+        "ast-grep",
       })
     end,
   },

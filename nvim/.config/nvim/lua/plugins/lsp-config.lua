@@ -11,7 +11,7 @@ return {
         "css-lsp",
         "black",
         "biome",
-        "ast-grep",
+        "clangd",
       })
     end,
   },

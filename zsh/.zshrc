@@ -227,4 +227,4 @@ eval "$(starship init zsh)"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-. "$HOME/.local/bin/env"
+# . "$HOME/.local/bin/env"

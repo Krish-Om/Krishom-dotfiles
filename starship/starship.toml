@@ -15,12 +15,17 @@ $package\
 $aws\
 $docker_context\
 $jobs\
-$cmd_duration\
+$time\
 $line_break\
 $character"""
 
 add_newline = true
 palette = 'nord'
+
+[time]
+time_format = %H:%M:%S
+style = 'dimmed white'
+show_always=true
 
 [username]
 show_always=true

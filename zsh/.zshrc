@@ -1,7 +1,7 @@
 # export VOLTA_HOME="$HOME/.volta"
 # export PATH="$VOLTA_HOME/bin:$PATH"
-
-alias bkps='$HOME/Softwares/Beekeeper-Studio-5.0.9.AppImage'
+export PATH="$HOME/conda-bin:$PATH"
+alias beekeeper='$HOME/Softwares/Beekeeper-Studio-5.2.6.AppImage'
 alias obsidian-start='systemctl --user enable git-sync-obsidian.timer'
 alias obsidian-status='systemctl --user status git-sync-obsidian.timer'
 alias heroic='flatpak run com.heroicgameslauncher.hgl'
@@ -228,3 +228,10 @@ eval "$(starship init zsh)"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # . "$HOME/.local/bin/env"
+
+# bun completions
+[ -s "/home/krishom/.bun/_bun" ] && source "/home/krishom/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"

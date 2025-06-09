@@ -14,7 +14,7 @@ alias nvim "$HOME/Softwares/nvim-linux-x86_64.appimage"
 alias zed "$HOME/Softwares/zed-linux-x86_64/zed.app/bin/zed"
 alias cursor "$HOME/Softwares/cursor-0.45.14x86_64.AppImage"
 alias solidtime "$HOME/Softwares/solidtime-x64/solidtime"
-
+alias launchconda "$HOME/Softwares/conda.sh"
 # Add Flatpak exports to XDG data dirs
 if test -d /var/lib/flatpak/exports/share
     set -gx XDG_DATA_DIRS "/var/lib/flatpak/exports/share:$XDG_DATA_DIRS"
@@ -38,7 +38,6 @@ alias python python3
 
 # Code alias
 alias code code
-
 # Colors for ls and grep commands
 set -gx CLICOLOR 1
 set -gx LS_COLORS 'no=00:fi=00:di=00;34:ln=01;36:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arj=01;31:*.taz=01;31:*.lzh=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.gz=01;31:*.bz2=01;31:*.deb=01;31:*.rpm=01;*.jar=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.avi=01;35:*.fli=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.ogg=01;35:*.mp3=01;35:*.wav=01;35:*.xml=00;31:'

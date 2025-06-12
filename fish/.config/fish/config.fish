@@ -6,13 +6,15 @@ set -g fish_greeting
 set -gx PATH "$HOME/conda-bin" $PATH
 
 # Application aliases
-alias beekeeper "$HOME/Softwares/Beekeeper-Studio-5.2.6.AppImage"
+alias zen "$HOME/Softwares/zen-*.AppImage"
+alias beekeeper "$HOME/Softwares/Beekeeper-Studio-*.AppImage"
+alias obsidian "$HOME/Softwares/Obsidian-1.8.10.AppImage --disable-gpu"
 alias obsidian-start "systemctl --user enable git-sync-obsidian.timer"
 alias obsidian-status "systemctl --user status git-sync-obsidian.timer"
 alias heroic "flatpak run com.heroicgameslauncher.hgl"
-alias nvim "$HOME/Softwares/nvim-linux-x86_64.appimage"
+alias nvim "$HOME/Softwares/nvim-linux-*.appimage"
 alias zed "$HOME/Softwares/zed-linux-x86_64/zed.app/bin/zed"
-alias cursor "$HOME/Softwares/cursor-0.45.14x86_64.AppImage"
+alias cursor "$HOME/Softwares/cursor-*x86_64.AppImage"
 alias solidtime "$HOME/Softwares/solidtime-x64/solidtime"
 alias launchconda "$HOME/Softwares/conda.sh"
 # Add Flatpak exports to XDG data dirs

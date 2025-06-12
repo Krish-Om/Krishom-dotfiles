@@ -15,32 +15,42 @@ $package\
 $aws\
 $docker_context\
 $jobs\
-$cmd_duration\
-$line_break\
-$character"""
-
+$time
+$character\
+"""
 add_newline = true
 palette = 'nord'
 
-[username]
-show_always=true
+[os]
+disabled = false
+style = 'bold fg:blue'
+symbols = { Arch = "🏛️ " }
 
+[time]
+disabled = false
+format = '[$time]($style) '
+time_format = '%H:%M:%S'
+style = 'dimmed white'
+utc_time_offset = "local"
+
+[username]
+show_always = true
+format = '$user($style) '
 [directory]
 style = 'bold fg:dark_blue'
 format = '[$path ]($style)'
 truncation_length = 3
-truncation_symbol = '…/'
 truncate_to_repo = false
 
 [directory.substitutions]
 'Documents' = '󰈙'
-'Downloads' = ' '
-'Music' = ' '
-'Pictures' = ' '
+'Downloads' = ' '
+'Music' = ' '
+'Pictures' = ' '
 
 [git_branch]
 style = 'fg:green'
-symbol = ' '
+symbol = ' '
 format = '[on](white) [$symbol$branch ]($style)'
 
 [git_status]
@@ -52,51 +62,51 @@ symbol = ' '
 
 [python]
 style = 'teal'
-symbol = ' '
+symbol = ' '
 format = '[${symbol}${pyenv_prefix}(${version} )(\($virtualenv\) )]($style)'
 pyenv_version_name = true
 pyenv_prefix = ''
 
 [lua]
-symbol = ' '
+symbol = ' '
 
 [nodejs]
 style = 'blue'
-symbol = ' '
+symbol = ' '
 
 [golang]
 style = 'blue'
-symbol = ' '
+symbol = ' '
 
 [haskell]
 style = 'blue'
-symbol = ' '
+symbol = ' '
 
 [rust]
 style = 'orange'
-symbol = ' '
+symbol = ' '
 
 [ruby]
 style = 'blue'
-symbol = ' '
+symbol = ' '
 
 [package]
 symbol = '󰏗 '
 
 [aws]
-symbol = ' '
+symbol = ' '
 style = 'yellow'
 format = '[$symbol($profile )(\[$duration\] )]($style)'
 
 [docker_context]
-symbol = ' '
+symbol = ' '
 style = 'fg:#06969A'
 format = '[$symbol]($style) $path'
 detect_files = ['docker-compose.yml', 'docker-compose.yaml', 'Dockerfile']
 detect_extensions = ['Dockerfile']
 
 [jobs]
-symbol = ' '
+symbol = ' '
 style = 'red'
 number_threshold = 1
 format = '[$symbol]($style)'

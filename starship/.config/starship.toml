@@ -44,9 +44,6 @@ truncate_to_repo = false
 
 [directory.substitutions]
 'Documents' = '󰈙'
-'Downloads' = ' '
-'Music' = ' '
-'Pictures' = ' '
 
 [git_branch]
 style = 'fg:green'

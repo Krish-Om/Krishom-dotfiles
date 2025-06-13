@@ -251,3 +251,17 @@ end
 # Bun setup (PATH only, skip completions if problematic)
 set -gx BUN_INSTALL "$HOME/.bun"
 set -gx PATH "$BUN_INSTALL/bin" $PATH
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+if test -f /home/krishom/anaconda3/bin/conda
+    eval /home/krishom/anaconda3/bin/conda "shell.fish" "hook" $argv | source
+else
+    if test -f "/home/krishom/anaconda3/etc/fish/conf.d/conda.fish"
+        . "/home/krishom/anaconda3/etc/fish/conf.d/conda.fish"
+    else
+        set -x PATH "/home/krishom/anaconda3/bin" $PATH
+    end
+end
+# <<< conda initialize <<<
+

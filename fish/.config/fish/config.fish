@@ -3,16 +3,16 @@
 
 set -g fish_greeting
 # PATH exports
-set -gx PATH "$HOME/conda-bin" $PATH
+# set -gx PATH "$HOME/conda-bin" $PATH
 
 # Application aliases
 alias zen "$HOME/Softwares/zen-*.AppImage"
-alias beekeeper "$HOME/Softwares/Beekeeper-Studio-*.AppImage"
+# alias beekeeper "$HOME/Softwares/Beekeeper-Studio-*.AppImage"
 alias obsidian "$HOME/Softwares/Obsidian-1.8.10.AppImage --disable-gpu"
 alias obsidian-start "systemctl --user enable git-sync-obsidian.timer"
 alias obsidian-status "systemctl --user status git-sync-obsidian.timer"
 alias heroic "flatpak run com.heroicgameslauncher.hgl"
-alias nvim "$HOME/Softwares/nvim-linux-*.appimage"
+alias nvim "$HOME/Softwares/nvim-linux-x86_64.appimage"
 alias zed "$HOME/Softwares/zed-linux-x86_64/zed.app/bin/zed"
 alias cursor "$HOME/Softwares/cursor-*x86_64.AppImage"
 alias solidtime "$HOME/Softwares/solidtime-x64/solidtime"
@@ -230,7 +230,13 @@ function lazygb
     git commit -m $argv[1]
     git push origin $argv[2]
 end
+#conda 
 
+function conda-init
+    set -gx PATH /home/krishom/anaconda3/bin $PATH
+    eval (/home/krishom/anaconda3/bin/conda shell.fish hook)
+end
+# funcsave conda-init
 # Autojump setup
 if test -s /home/krishom/.autojump/etc/profile.d/autojump.fish
     source /home/krishom/.autojump/etc/profile.d/autojump.fish 2>/dev/null
@@ -254,14 +260,13 @@ set -gx PATH "$BUN_INSTALL/bin" $PATH
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-if test -f /home/krishom/anaconda3/bin/conda
-    eval /home/krishom/anaconda3/bin/conda "shell.fish" "hook" $argv | source
-else
-    if test -f "/home/krishom/anaconda3/etc/fish/conf.d/conda.fish"
-        . "/home/krishom/anaconda3/etc/fish/conf.d/conda.fish"
-    else
-        set -x PATH "/home/krishom/anaconda3/bin" $PATH
-    end
-end
+# if test -f /home/krishom/anaconda3/bin/conda
+#     eval /home/krishom/anaconda3/bin/conda "shell.fish" hook $argv | source
+# else
+#     if test -f "/home/krishom/anaconda3/etc/fish/conf.d/conda.fish"
+#         . "/home/krishom/anaconda3/etc/fish/conf.d/conda.fish"
+#     else
+#         set -x PATH /home/krishom/anaconda3/bin $PATH
+#     end
+# end
 # <<< conda initialize <<<
-

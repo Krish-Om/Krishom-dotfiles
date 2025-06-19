@@ -15,11 +15,19 @@ $package\
 $aws\
 $docker_context\
 $jobs\
+$shell\
 $time
 $character\
 """
 add_newline = true
 palette = 'nord'
+[shell]
+disabled = false
+format = "[$indicator]($style) "
+bash_indicator = "🔨 bash"
+fish_indicator = "🐟 fish" 
+zsh_indicator = "⚡ zsh"
+style = "cyan bold"
 
 [os]
 disabled = false

@@ -1,5 +1,5 @@
 theme = Afterglow 
-shell-integration = fish
+shell-integration = fish 
 clipboard-read = allow
 clipboard-write = allow
 copy-on-select = true

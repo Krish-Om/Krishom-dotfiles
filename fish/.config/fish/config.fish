@@ -15,8 +15,8 @@ alias heroic "flatpak run com.heroicgameslauncher.hgl"
 alias nvim "$HOME/Softwares/nvim-linux-x86_64.appimage"
 alias zed "$HOME/Softwares/zed-linux-x86_64/zed.app/bin/zed"
 alias cursor "$HOME/Softwares/cursor-*x86_64.AppImage"
-alias solidtime "$HOME/Softwares/solidtime-x64/solidtime"
 alias launchconda "$HOME/Softwares/conda.sh"
+alias wakatime "$HOME/Softwares/wakatime-linux-x86_64.AppImage"
 # Add Flatpak exports to XDG data dirs
 if test -d /var/lib/flatpak/exports/share
     set -gx XDG_DATA_DIRS "/var/lib/flatpak/exports/share:$XDG_DATA_DIRS"

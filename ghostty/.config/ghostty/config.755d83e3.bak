@@ -13,4 +13,3 @@ cursor-text = #cad3f5
 font-size = 14
 mouse-hide-while-typing = true
 cursor-style = bar
-keybind = shift+enter=text:\n

@@ -238,8 +238,8 @@ function conda-init
 end
 # funcsave conda-init
 # Autojump setup
-if test -s /home/krishom/.autojump/etc/profile.d/autojump.fish
-    source /home/krishom/.autojump/etc/profile.d/autojump.fish 2>/dev/null
+if test -f /etc/fish/conf.d/autojump.fish
+    source /etc/fish/conf.d/autojump.fish 2>/dev/null
 end
 
 # Starship prompt

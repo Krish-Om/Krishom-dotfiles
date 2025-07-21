@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 # Krishom's Dotfiles Installation Script
 # This script checks for installed applications and installs missing ones
 

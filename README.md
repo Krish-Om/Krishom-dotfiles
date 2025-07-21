@@ -138,23 +138,7 @@ sudo pacman -S stow git
 ### Development Environment
 - **Bun** - Fast JavaScript runtime
   ```bash
-  curl -fsSL https://bun.sh/install | bash
-  ```
-
-- **Node.js** - JavaScript runtime
-  ```bash
-  sudo pacman -S nodejs npm
-  ```
-
-### System Tools
-- **Multitail** - Monitor multiple log files
-  ```bash
-  sudo pacman -S multitail
-  ```
-
-- **ClamAV** - Antivirus scanner
-  ```bash
-  sudo pacman -S clamav
+  curl -fsSL https://bun.sh/install | bash #Linux/wsl
   ```
 
 ## 📁 Configuration Overview
@@ -287,5 +271,3 @@ Feel free to:
 ---
 
 *Last updated: July 2025*
-
-

@@ -6,6 +6,7 @@ A comprehensive collection of configuration files for a modern Linux development
 
 - [Prerequisites](#prerequisites)
 - [Installation](#installation)
+- [Cross-Platform Setup](#cross-platform-setup)
 - [Software & Tools](#software--tools)
 - [Configuration Overview](#configuration-overview)
 - [Usage](#usage)
@@ -25,7 +26,45 @@ Before setting up these dotfiles, ensure you have the following installed:
 sudo pacman -S stow git
 ```
 
+> **⚠️ Platform Compatibility:** 
+> - The automated installation script (`install.sh`) is designed specifically for **Arch Linux** and uses `pacman` and AUR helpers.
+> - **Manual installation** with GNU Stow works on Linux, macOS, and Windows (WSL).
+> - For other platforms, see the [Cross-Platform Setup](#cross-platform-setup) section below.
+
 ## 🚀 Installation
+
+### Option 1: Automated Installation (Recommended)
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/Krish-Om/Krishom-dotfiles.git
+   cd Krishom-dotfiles
+   ```
+
+2. **Run the installation script:**
+   ```bash
+   chmod +x install.sh
+   ./install.sh
+   ```
+
+   The script will automatically:
+   - Check for existing installations
+   - Install missing packages using pacman and AUR
+   - Set up Fish shell as default
+   - Install development tools (Bun, Node.js, etc.)
+   - Stow all dotfiles configurations
+   - Create necessary directories
+
+3. **Script Options:**
+   ```bash
+   ./install.sh --help          # Show help and available options
+   ./install.sh --core-only     # Install only core tools (fish, starship, kitty)
+   ./install.sh --dev-only      # Install only development tools
+   ./install.sh --hypr-only     # Install only Hyprland and related tools
+   ./install.sh --stow-only     # Only stow configurations (skip packages)
+   ```
+
+### Option 2: Manual Installation
 
 1. **Clone the repository:**
    ```bash
@@ -52,6 +91,104 @@ sudo pacman -S stow git
    ```
 
 3. **Install required software packages** (see Software & Tools section below)
+
+## 🌍 Cross-Platform Setup
+
+### macOS
+
+1. **Install Homebrew** (if not already installed):
+   ```bash
+   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+   ```
+
+2. **Install compatible tools**:
+   ```bash
+   # Core tools
+   brew install fish starship neovim tmux git stow
+   brew install --cask kitty
+   
+   # Development tools
+   brew install ripgrep fzf lazygit
+   brew install node bun
+   ```
+
+3. **Set Fish as default shell**:
+   ```bash
+   echo /opt/homebrew/bin/fish | sudo tee -a /etc/shells
+   chsh -s /opt/homebrew/bin/fish
+   ```
+
+4. **Stow configurations**:
+   ```bash
+   # Only stow compatible configs
+   stow fish starship nvim tmux kitty vscode
+   ```
+
+### Windows (WSL2)
+
+1. **Install WSL2 with Ubuntu/Arch**:
+   ```powershell
+   wsl --install -d Ubuntu
+   # or for Arch: wsl --install -d ArchWSL
+   ```
+
+2. **For Ubuntu WSL**:
+   ```bash
+   # Update and install tools
+   sudo apt update && sudo apt upgrade
+   sudo apt install fish neovim tmux git stow curl
+   
+   # Install additional tools
+   curl -sS https://starship.rs/install.sh | sh
+   cargo install ripgrep  # or use apt if available
+   ```
+
+3. **For Arch WSL**:
+   ```bash
+   # Use the main install script
+   ./install.sh
+   ```
+
+4. **Windows Terminal integration**:
+   - Install Windows Terminal from Microsoft Store
+   - Configure Fish as default profile
+   - Import Kitty colorschemes for Windows Terminal
+
+### Other Linux Distributions
+
+#### Ubuntu/Debian
+```bash
+# Install via apt
+sudo apt update
+sudo apt install fish neovim tmux git stow
+sudo snap install starship
+
+# Manual installations
+curl -fsSL https://bun.sh/install | bash
+```
+
+#### Fedora
+```bash
+# Install via dnf
+sudo dnf install fish neovim tmux git stow
+sudo dnf install starship ripgrep fzf
+
+# Flatpak for additional apps
+flatpak install flathub org.kde.konsole
+```
+
+### Limitations by Platform
+
+| Feature | Linux | macOS | Windows | WSL2 |
+|---------|-------|-------|---------|------|
+| Hyprland | ✅ | ❌ | ❌ | ❌ |
+| Fish Shell | ✅ | ✅ | ❌ | ✅ |
+| Kitty Terminal | ✅ | ✅ | ❌ | ✅ |
+| Neovim Config | ✅ | ✅ | ✅ | ✅ |
+| Starship Prompt | ✅ | ✅ | ✅ | ✅ |
+| AppImages | ✅ | ❌ | ❌ | ❌ |
+
+> **Note:** Hyprland is a Wayland compositor and only works on Linux. For macOS/Windows, consider using alternative window managers or terminal setups.
 
 ## 🛠️ Software & Tools
 
@@ -250,6 +387,18 @@ hyprland --check-config
 # Remove existing config and re-stow
 rm -rf ~/.config/fish
 stow fish
+```
+
+**Installation script issues:**
+```bash
+# Make script executable if needed
+chmod +x install.sh
+
+# Run with verbose output for debugging
+bash -x ./install.sh
+
+# Check specific component installation
+./install.sh --dev-only
 ```
 
 ### Application Paths

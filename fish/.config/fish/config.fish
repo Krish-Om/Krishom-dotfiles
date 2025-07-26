@@ -212,13 +212,17 @@ function mysqlconfig
     echo "Searching for possible locations:"
     sudo updatedb; and locate my.cnf
 end
-
 # Git functions
 function gcom
     git add .
     git commit -m $argv[1]
 end
-
+function lazygd
+    set dt (date | string split -n ' ' | string join '')
+    git add .
+    git commit -m "$dt"
+    git push
+end
 function lazyg
     git add .
     git commit -m $argv[1]

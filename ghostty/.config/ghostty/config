@@ -12,7 +12,7 @@ selection-foreground = #fcfcfa
 
 # Clean typography
 font-family = "JetBrains Mono Nerd Font"
-font-size = 14
+font-size = 12
 font-feature = +liga
 font-feature = +calt
 

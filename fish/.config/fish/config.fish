@@ -218,7 +218,7 @@ function gcom
     git commit -m $argv[1]
 end
 function lazygd
-    set dt (date | string split -n ' ' | string join '')
+    set dt (date)
     git add .
     git commit -m "$dt"
     git push

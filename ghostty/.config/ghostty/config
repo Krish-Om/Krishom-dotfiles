@@ -24,7 +24,7 @@ window-padding-y = 10
 
 # Gentle transparency for depth
 background-opacity = 0.75
-background-blur-radius = 12
+background-blur-radius = 10
 
 # Shell integration
 shell-integration = fish

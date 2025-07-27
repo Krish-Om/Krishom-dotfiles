@@ -6,14 +6,14 @@ set -g fish_greeting
 # set -gx PATH "$HOME/conda-bin" $PATH
 
 # Application aliases
-alias zen "$HOME/Softwares/zen-x86_64.AppImage"
+# alias zen "$HOME/Softwares/zen-x86_64.AppImage"
 # alias beekeeper "$HOME/Softwares/Beekeeper-Studio-*.AppImage"
 alias obsidian "$HOME/Softwares/Obsidian-1.8.10.AppImage --disable-gpu"
-alias obsidian-start "systemctl --user enable git-sync-obsidian.timer"
-alias obsidian-status "systemctl --user status git-sync-obsidian.timer"
+# alias obsidian-start "systemctl --user enable git-sync-obsidian.timer"
+# alias obsidian-status "systemctl --user status git-sync-obsidian.timer"
 alias heroic "flatpak run com.heroicgameslauncher.hgl"
-alias nvim "$HOME/Softwares/nvim-linux-x86_64.appimage"
-alias zed "$HOME/Softwares/zed-linux-x86_64/zed.app/bin/zed"
+# alias nvim "$HOME/Softwares/nvim-linux-x86_64.appimage"
+# alias zed "$HOME/Softwares/zed-linux-x86_64/zed.app/bin/zed"
 alias cursor "$HOME/Softwares/cursor-*x86_64.AppImage"
 alias launchconda "$HOME/Softwares/conda.sh"
 alias wakatime "$HOME/Softwares/wakatime-linux-x86_64.AppImage"

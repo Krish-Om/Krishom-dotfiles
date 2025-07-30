@@ -2,9 +2,6 @@
 # Date: June 4, 2025
 
 set -g fish_greeting
-# PATH exports
-# set -gx PATH "$HOME/conda-bin" $PATH
-
 # Application aliases
 # alias zen "$HOME/Softwares/zen-x86_64.AppImage"
 # alias beekeeper "$HOME/Softwares/Beekeeper-Studio-*.AppImage"
@@ -220,7 +217,7 @@ end
 function lazygd
     set dt (date)
     git add .
-    git commit -m "$dt"
+    git commit -m "$argv[1]: $dt"
     git push
 end
 function lazyg
@@ -235,10 +232,8 @@ function lazygb
     git push origin $argv[2]
 end
 #conda 
-
 function conda-init
-    set -gx PATH /home/krishom/anaconda3/bin $PATH
-    eval (/home/krishom/anaconda3/bin/conda shell.fish hook)
+    eval "$(/home/krishom/miniconda3/bin/conda shell.fish hook)"
 end
 # funcsave conda-init
 # Autojump setup
@@ -261,16 +256,3 @@ end
 # Bun setup (PATH only, skip completions if problematic)
 set -gx BUN_INSTALL "$HOME/.bun"
 set -gx PATH "$BUN_INSTALL/bin" $PATH
-
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-# if test -f /home/krishom/anaconda3/bin/conda
-#     eval /home/krishom/anaconda3/bin/conda "shell.fish" hook $argv | source
-# else
-#     if test -f "/home/krishom/anaconda3/etc/fish/conf.d/conda.fish"
-#         . "/home/krishom/anaconda3/etc/fish/conf.d/conda.fish"
-#     else
-#         set -x PATH /home/krishom/anaconda3/bin $PATH
-#     end
-# end
-# <<< conda initialize <<<

@@ -1,4 +1,4 @@
 function conda-init
-    set -gx PATH /home/krishom/anaconda3/bin $PATH
-    eval (/home/krishom/anaconda3/bin/conda shell.fish hook)
+    set -gx PATH /home/krishom/miniconda3/bin $PATH
+    eval (/home/krishom/miniconda3/bin/conda shell.fish hook)
 end

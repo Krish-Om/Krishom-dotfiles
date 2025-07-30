@@ -18,9 +18,8 @@ font-feature = +calt
 
 # Comfortable window settings
 window-theme = dark
-window-decoration = true
-window-padding-x = 14
-window-padding-y = 10
+window-padding-x = 1
+window-padding-y = 1
 
 # Gentle transparency for depth
 background-opacity = 0.75

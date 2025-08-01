@@ -217,7 +217,7 @@ end
 function lazygd
     set dt (date)
     git add .
-    git commit -m "$argv[1]: $dt"
+    git commit -m "$argv[1] $dt"
     git push
 end
 function lazyg

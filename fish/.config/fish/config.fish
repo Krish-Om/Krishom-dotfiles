@@ -256,3 +256,8 @@ end
 # Bun setup (PATH only, skip completions if problematic)
 set -gx BUN_INSTALL "$HOME/.bun"
 set -gx PATH "$BUN_INSTALL/bin" $PATH
+
+#pyenv
+pyenv init - fish | source
+# uv
+fish_add_path "/home/krishom/.local/bin"
